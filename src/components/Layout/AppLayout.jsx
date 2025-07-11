@@ -1,12 +1,14 @@
-import React from 'react'
+
 import Header from './Header'
-import Fotter from './Fotter'
+import Footer from './Footer'
+import { Outlet } from 'react-router'
 
 function AppLayout() {
   return (
     <div>
       <Header/>
-      <Fotter/>
+      <Outlet/>
+      <Footer/>
     </div>
   )
 }

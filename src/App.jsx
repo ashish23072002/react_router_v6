@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Movies from "./pages/Movies";
+import AppLayout from "./components/Layout/AppLayout";
 
 const App = () => {
   //Two way to use Route
@@ -25,22 +26,28 @@ const App = () => {
 
   //  Lates way of using  createBrowserRouter
 
-    const router = createBrowserRouter([
+  const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home />,
-    },
-    {
-      path: "/about",
-      element: <About />,
-    },
-    {
-      path: "/movies",
-      element: <Movies />,
-    },
-    {
-      path: "/contact",
-      element: <Contact />,
+      element: <AppLayout />,
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/about",
+          element: <About />,
+        },
+        {
+          path: "/movies",
+          element: <Movies />,
+        },
+        {
+          path: "/contact",
+          element: <Contact />,
+        },
+      ],
     },
   ]);
   return <RouterProvider router={router} />;
