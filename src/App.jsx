@@ -1,7 +1,6 @@
 import {
   createBrowserRouter,
-  // createRoutesFromChildren,
-  createRoutesFromElements,
+  // createRoutesFromElements,
   Route,
   RouterProvider,
 } from "react-router";
@@ -13,37 +12,37 @@ import Movies from "./pages/Movies";
 const App = () => {
   //Two way to use Route
   //  Traditional way of using  createRoutesFromElements
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/movies" element={<Movies />} />
-        <Route path="/contact" element={<Contact />} />
-      </Route>
-    )
-  );
+  // const router = createBrowserRouter(
+  //   createRoutesFromElements(
+  //     <Route>
+  //       <Route path="/" element={<Home />} />
+  //       <Route path="/about" element={<About />} />
+  //       <Route path="/movies" element={<Movies />} />
+  //       <Route path="/contact" element={<Contact />} />
+  //     </Route>
+  //   )
+  // );
 
   //  Lates way of using  createBrowserRouter
 
-  //   const router = createBrowserRouter([
-  //   {
-  //     path: "/",
-  //     element: <Home />,
-  //   },
-  //   {
-  //     path: "/about",
-  //     element: <About />,
-  //   },
-  //   {
-  //     path: "/movies",
-  //     element: <Movies />,
-  //   },
-  //   {
-  //     path: "/contact",
-  //     element: <Contact />,
-  //   },
-  // ]);
+    const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/about",
+      element: <About />,
+    },
+    {
+      path: "/movies",
+      element: <Movies />,
+    },
+    {
+      path: "/contact",
+      element: <Contact />,
+    },
+  ]);
   return <RouterProvider router={router} />;
 };
 
