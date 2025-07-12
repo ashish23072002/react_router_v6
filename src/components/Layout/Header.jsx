@@ -1,6 +1,11 @@
 import { NavLink } from "react-router";
 
 const Header = () => {
+  const getNavLinkStyle = ({ isActive }) => {
+    return {
+      color: isActive ? "yellow" : "black",
+    };
+  };
   return (
     <>
       <header className="section-navbar">
@@ -28,6 +33,9 @@ const Header = () => {
               <li className="nav-item">
                 <NavLink
                   to="/"
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
                 >
                   Home
                 </NavLink>
@@ -35,6 +43,11 @@ const Header = () => {
               <li className="nav-item">
                 <NavLink
                   to="/about"
+                  style={({ isActive }) => {
+                    return {
+                      color: isActive ? "red" : "black",
+                    };
+                  }}
                 >
                   about
                 </NavLink>
@@ -42,6 +55,8 @@ const Header = () => {
               <li className="nav-item">
                 <NavLink
                   to="movies"
+                  className="nav-link"
+                  style={getNavLinkStyle}
                 >
                   movies
                 </NavLink>
@@ -49,6 +64,9 @@ const Header = () => {
               <li className="nav-item">
                 <NavLink
                   to="contact"
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
                 >
                   contact
                 </NavLink>
