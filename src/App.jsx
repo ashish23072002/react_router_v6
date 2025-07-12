@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Movies from "./pages/Movies";
 import AppLayout from "./components/Layout/AppLayout";
+import './App.css'
 
 const App = () => {
   //Two way to use Route
