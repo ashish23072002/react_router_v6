@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import Movies from "./pages/Movies";
 import AppLayout from "./components/Layout/AppLayout";
 import './App.css'
+import ErrorPage from "./pages/ErrorPage";
 
 const App = () => {
   //Two way to use Route
@@ -31,6 +32,7 @@ const App = () => {
     {
       path: "/",
       element: <AppLayout />,
+      errorElement:<ErrorPage/>,
       children: [
         {
           path: "/",
