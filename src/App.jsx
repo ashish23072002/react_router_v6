@@ -11,6 +11,7 @@ import Movies from "./pages/Movies";
 import AppLayout from "./components/Layout/AppLayout";
 import './App.css'
 import ErrorPage from "./pages/ErrorPage";
+import { getMoviesData } from "./api/GetApiData";
 
 const App = () => {
   //Two way to use Route
@@ -45,6 +46,7 @@ const App = () => {
         {
           path: "/movies",
           element: <Movies />,
+          loader: getMoviesData,
         },
         {
           path: "/contact",
