@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="section-footer">
       <div className="footer-container container">
         <div className="content_1">
-          <img src="" alt="logo" />
+          <img  src="https://i.postimg.cc/mZ6tGPJd/logo.gif" alt="logo" style={{width:'50px'}} />
           <p>
             Welcome to Ashish EcomStore, your ultimate destination for
             cutting-edge gadgets!

@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 import "./Card.css";
 // /* eslint-disable react/prop-types */
 
@@ -11,8 +12,9 @@ export const Card = ({ currentMovie }) => {
         </div>
         <div className="ticket-container">
           <div className="ticket__content">
+            <NavLink to={`/movies/${imdbID}`}>
               <button className="ticket__buy-btn">Watch now</button>
-          </div>
+            </NavLink>          </div>
         </div>
       </div>
     </li>

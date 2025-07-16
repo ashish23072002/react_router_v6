@@ -9,9 +9,11 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Movies from "./pages/Movies";
 import AppLayout from "./components/Layout/AppLayout";
-import './App.css'
+import "./App.css";
 import ErrorPage from "./pages/ErrorPage";
 import { getMoviesData } from "./api/GetApiData";
+import { MoviesDetails } from "./components/UI/MoviesDetails";
+import { getMoviesDetails } from "./api/GetMoviesDetails";
 
 const App = () => {
   //Two way to use Route
@@ -33,7 +35,7 @@ const App = () => {
     {
       path: "/",
       element: <AppLayout />,
-      errorElement:<ErrorPage/>,
+      errorElement: <ErrorPage />,
       children: [
         {
           path: "/",
@@ -49,8 +51,13 @@ const App = () => {
           loader: getMoviesData,
         },
         {
+          path: "/movies/:movieID",
+          element: <MoviesDetails />,
+          loader: getMoviesDetails,
+        },
+        {
           path: "/contact",
-          element: <Contact />,
+          element: <Contact />, 
         },
       ],
     },
