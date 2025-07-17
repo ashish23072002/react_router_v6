@@ -6,7 +6,6 @@ import {
 } from "react-router";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
 import Movies from "./pages/Movies";
 import AppLayout from "./components/Layout/AppLayout";
 import "./App.css";
@@ -14,6 +13,7 @@ import ErrorPage from "./pages/ErrorPage";
 import { getMoviesData } from "./api/GetApiData";
 import { MoviesDetails } from "./components/UI/MoviesDetails";
 import { getMoviesDetails } from "./api/GetMoviesDetails";
+import Contact, { contactData } from "./pages/Contact";
 
 const App = () => {
   //Two way to use Route
@@ -57,7 +57,8 @@ const App = () => {
         },
         {
           path: "/contact",
-          element: <Contact />, 
+          element: <Contact/>, 
+          action:contactData,
         },
       ],
     },
