@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { NavLink, useLoaderData } from "react-router";
 import "../UI/Card.css";
 
@@ -18,8 +19,12 @@ export const MoviesDetails = () => {
     Awards,
     imdbID,
     imdbRating,
-    
   } = movieData;
+
+  const totalMinutes = Runtime.replace("min", "");
+  const hours = Math.floor(totalMinutes / 60); // Calculate the number of hours
+  const minutes = totalMinutes % 60; // Calculate the remaining minutes
+  const formattedTime = `${hours}hr ${minutes}min`;
   return (
     <li className="hero-container hero-movie-container">
       <div className="main-container">
@@ -49,7 +54,7 @@ export const MoviesDetails = () => {
                 <span className="icons icons-grey">
                   <i className="fas fa-clock"></i>
                 </span>
-                {imdbID}
+                {formattedTime}
               </p>
               <p className="movie__detail">
                 <span className="icons icons-yellow">

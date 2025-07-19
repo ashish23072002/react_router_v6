@@ -4,7 +4,6 @@ import {
   Route,
   RouterProvider,
 } from "react-router";
-import Home from "./pages/Home";
 import About from "./pages/About";
 import Movies from "./pages/Movies";
 import AppLayout from "./components/Layout/AppLayout";
@@ -14,6 +13,7 @@ import { getMoviesData } from "./api/GetApiData";
 import { MoviesDetails } from "./components/UI/MoviesDetails";
 import { getMoviesDetails } from "./api/GetMoviesDetails";
 import Contact, { contactData } from "./pages/Contact";
+import { Home } from "./pages/Home";
 
 const App = () => {
   //Two way to use Route

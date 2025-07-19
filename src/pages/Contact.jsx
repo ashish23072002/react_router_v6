@@ -72,7 +72,7 @@ const Contact = () => {
             <div className="contact-image">
               <figure>
                 <img
-                  src="/contact.png"
+                  src="https://i.pinimg.com/originals/38/db/07/38db0791549a04e0139e90cbdb8a5f32.gif"
                   alt="contact pic"
                   className="contact_image"
                 />
